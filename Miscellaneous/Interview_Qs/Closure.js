@@ -1,27 +1,27 @@
-// //example 1:
-// function z() {
-//     let a = 10;
-//     function y() {
-//         console.log(a);
-//     }
-//     return y;
-// }
+//example 1:
+function z() {
+    let a = 10;
+    function y() {
+        console.log(a);
+    }
+    return y;
+}
 
-// let x = z(); // function y
-// console.log(x()); // 10
+let x = z(); // function y
+console.log(x()); // 10
 
 
 // example 2:
-// function outer() {
-//     var a = 7;
+function outer() {
+    var a = 7;
 
-//     function inner() {
-//         console.log(a);
-//     }
+    function inner() {
+        console.log(a);
+    }
 
-//     var a = 100;
-//     return inner;
-// }
+    var a = 100;
+    return inner;
+}
 
 // var result = outer(); //[Function: inner]
 // console.log(result()) //100
