@@ -21,7 +21,7 @@ obj2.company[1].company_name = "Google";
 console.log(obj1); // changed here as well
 console.log(obj2);
 
-console.log("..............................................")
+
 //Deep Copy:
 let obj3 = JSON.parse(JSON.stringify(obj1));
 obj3.company[1].company_name = "Flipkart";
