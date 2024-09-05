@@ -1,7 +1,7 @@
-// let sentence = "This";
-// let ans = sentence.split(" ");
-// console.log(ans);
-// console.log(ans.length - 1);
+let sentence = "This";
+let ans = sentence.split(" ");
+console.log(ans);
+console.log(ans.length - 1);
 
 
 console.log(isFinite(null)); // true
