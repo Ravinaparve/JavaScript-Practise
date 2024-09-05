@@ -1,0 +1,4 @@
+//Hashing notes and guide:
+// https://www.squash.io/javascript-hashmap-a-complete-guide/
+
+// to find the value from the hasmap , you will need to iterate
