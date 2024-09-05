@@ -1,30 +1,27 @@
-// var SubArraysSum = function(nums){
+var SubArraysSum = function(nums){
 
-//     let subArrays =[];
-//     let subArraysResult=[];
+    let subArrays =[];
+    let subArraysResult=[];
 
-//     let sumSubArrays =[];
-//     let sumSubArraysResult =[];
+    let sumSubArrays =[];
+    let sumSubArraysResult =[];
 
-//     for(let i=0; i<nums.length;i++){
+    for(let i=0; i<nums.length;i++){
+        for(let j=i; j<nums.length;j++){
+            let sum = 0;
+            subArraysResult.push(nums.slice(i,j+1));
 
-//         for(let j=i; j<nums.length;j++){
-
-//             let sum = 0;
-
-//             subArraysResult.push(nums.slice(i,j+1));
-
-//             for(let k=i; k<=j; k++){
-//                 sum+=nums[k];
-//             }
-//             sumSubArraysResult.push(sum);
-//         }
-//         subArrays.push(subArraysResult);
-//         sumSubArrays.push(sumSubArraysResult);
-//     }
-//     console.log(subArrays);
-//     console.log(sumSubArrays);
-// }
+            for(let k=i; k<=j; k++){
+                sum+=nums[k];
+            }
+            sumSubArraysResult.push(sum);
+        }
+        subArrays.push(subArraysResult);
+        sumSubArrays.push(sumSubArraysResult);
+    }
+    console.log(subArrays);
+    console.log(sumSubArrays);
+}
 
 //optimal Approach:
 
