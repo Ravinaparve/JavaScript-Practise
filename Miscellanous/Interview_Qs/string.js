@@ -24,32 +24,22 @@
 
 //a[name].toLowerCase()
 
-
 function reverseFn(str) {
     str = str.split("");
-    let start = 0;
-    let end = str.length - 1;
-    while (start < end) {
-        [str[start], str[end]] = [str[end], str[start]];
-        start++;
-        end--;
+    let i = 0;
+    let j = str.length - 1;
+    while (i < j) {
+        [str[i], str[j]] = [str[j], str[i]];
+        i++;
+        j--;
     }
-    return str.join("");
+    str[str.length - 1] = str[str.length - 1].toUpperCase(); // here the str is still array, so we can do this.
+    return str.join(""); // Convert the array back to a string
 }
-
-
-function reverseSent(sent) {
-    let res = [];
-    sent = sent.split(" ");
-    for (let i = 0; i < sent.length; i++) {
-        sent[i] = reverseFn(sent[i]);
-    }
-    return sent.join(" ");
-}
-
 let sentence = "reverse words from the given string";
-let res = reverseSent(sentence);
-console.log(res);
+let newSent = sentence.split(" ").map(word => reverseFn(word));
+
+console.log(newSent);
 
 
 
