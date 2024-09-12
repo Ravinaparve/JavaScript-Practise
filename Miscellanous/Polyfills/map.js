@@ -1,7 +1,7 @@
 //built in map()
 const nums = [1, 2, 3, 4];
 const multiplyByThree = nums.map((num, i, arr) => num * 3 + i);
-// console.log(multiplyByThree);
+console.log(multiplyByThree);
 //....................................................................................................................
 
 // Polyfill:
@@ -36,3 +36,23 @@ console.log(output);
 
 //After the loop completes, temp contains the results of applying the callback function to each element of the original array.
 // The temp array is returned as the result of myMap.
+
+// Method 2: 
+Array.prototype.cutomMap = function (cb) {
+    let temp = [];
+    for (let i = 0; i < this.length; i++) {
+        temp.push(cb(this[i], i, this));
+    }
+    return temp;
+}
+
+function mapCb(elem, i, arr) {
+    elem = elem * 2;
+    return elem;
+}
+
+let inpt = [1, 2, 3, 4];
+let ans = inpt.cutomMap(mapCb);
+console.log(ans);
+
+

@@ -1,0 +1,57 @@
+Promises:
+- Polyfill for Promise.all, Promise.race, Promise.allSettled.
+- Implement Async.parallel and Async.series to execute a set of asynchronous tasks in parallel and in series.
+- Implement a Retry API with n retries.
+- Build a Promise from scratch.
+- Understanding Promise.any and writing its polyfill.
+
+Function Concepts:
+- Currying with examples.
+- Implement String.prototype.repeat.
+- Implement the compose() and pipe() polyfills.
+- Difference between Function Declaration and Function Expression.
+- Creating a custom debounce and throttle function.
+
+Design Patterns:
+- Singleton and Factory patterns.
+- Implement the Publisher-Subscriber pattern in JavaScript.
+- Understanding and implementing the Observer pattern.
+- Decorator and Strategy patterns in JavaScript.
+
+Array Methods:
+- Polyfills for map, filter, reduce, and forEach.
+- Implementing Array.prototype.flat and flatMap polyfills.
+- Difference between splice and slice methods.
+
+Function Prototypes:
+- Implement polyfills for Function.prototype.bind, call, and apply.
+- Understanding prototypes and prototype inheritance.
+- How this keyword works in different contexts.
+- Understanding Object.create() and inheritance.
+
+JavaScript in the Browser:
+- How rendering works in the browser.
+- Event delegation and event propagation.
+- Implementing event.preventDefault() and event.stopPropagation().
+- Understanding and using requestAnimationFrame().
+
+Optimization Techniques:
+- Implement memoization.
+- Building Progressive Web Applications (PWAs).
+- Lazy loading of images and components.
+- Understanding and implementing code splitting in JavaScript.
+
+Object Handling:
+- Cloning an object.
+- Deep vs. Shallow copy in JavaScript.
+- Implementing a deep clone function.
+
+Timers and Events:
+- Implement clearAllTimeout().
+- Understanding the event loop and task queues in JavaScript.
+- EventTarget methods: addEventListener, removeEventListener, dispatchEvent.
+
+Browser APIs:
+- Intersection Observer.
+- Understanding and using MutationObserver.
+- Using localStorage, sessionStorage, and cookies effectively.

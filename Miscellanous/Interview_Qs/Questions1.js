@@ -53,6 +53,18 @@ for (let i = 0; i < charArr.length; i++) {
 
 }
 
+// Q10: guess the result:
+let input1 = 0;
+if (input1) {
+    console.log("Zero");
+} else {
+    console.log("One");
+}
+//.............................................................
+
+let input = 0;
+let result = input ? "Zero" : "One";
+console.log(result);
 
 function func(a, b, num) {
     if (num == 1) return swapped
