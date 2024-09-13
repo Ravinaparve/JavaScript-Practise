@@ -5,6 +5,8 @@
 
 
 console.log(isFinite(null)); // true
+//The null value is treated as 0 when used in numerical contexts, and since 0 is a finite number, isFinite(null) returns true.
+
 console.log(+" ");
 
 console.log(isFinite(" ")); // true
