@@ -160,3 +160,28 @@ function a() {
         }, i * 1000);
     }
 }
+
+//.................................................................................................
+
+function memoize() {
+    return function (...args) {
+        console.log(...args);
+    }
+}
+
+let result = memoize();
+console.log(result("rita", 12)) //rita 12
+
+//Explanation:
+//The memoize function is defined but It does not take any arguments.
+// It returns an anonymous function (a function without a name) that takes any number of arguments (using ...args, which is the rest parameter syntax).
+// Inside this anonymous function, ...args collects all arguments passed to this returned function into an array.
+//The inner anonymous function returned by memoize is assigned to the variable result
+//console.log(...args) prints all the collected arguments to the console.
+
+
+//Q Difference between closure and scope:
+// when inner function is wrapped in outer fn , inner fn is closure. we can return the inner functn and access the variable from outer.
+
+// scope defines what variable we have access to.
+// global scope or block scope, local scope

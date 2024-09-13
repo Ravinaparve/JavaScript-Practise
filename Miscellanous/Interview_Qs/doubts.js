@@ -1,4 +1,4 @@
-// Difference btw 2 codes:
+//Q1:  What is the Difference btw 2 codes:
 for (let i = 0; i < 5; i++) {
     setTimeout(function () {
         console.log(i);
@@ -10,7 +10,10 @@ for (var i = 0; i < 5; i++) {
         console.log(i);
     }, i * 1000)
 }
-//..................................................................................
+//.....................................................................................................
+
+
+//Q2:  What is the Difference btw 2 codes:
 function a() {
     for (var i = 0; i < 3; i++) {
         setTimeout(function log() {
@@ -18,7 +21,7 @@ function a() {
         }, i * 1000);
     }
 }
-
+a();
 //vs
 
 function a() {
@@ -28,3 +31,4 @@ function a() {
         }, i * 1000);
     }
 }
+a();
