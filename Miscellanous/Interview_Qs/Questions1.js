@@ -22,16 +22,20 @@ console.log(typeof (NaN));
 console.log('5' - '3' + 6); // + and - has same precedence.. and express is evaluated from left to right
 
 
-//Q7 : what's the output:
+//Q7(A) : what's the output:
 
 var arr = [1, 2, [3, 4]];
 {
-
     let arr = ["Z", "A", "D", "B", "E"];
 }
-console.log(arr);
+console.log(arr); //[1, 2, [3, 4]];
 
-
+//Q7(B) : what's the output:
+let arr = [1, 2, [3, 4]];
+{
+    var arr = ["Z", "A", "D", "B", "E"];
+}
+console.log(arr); // error : illegal shadowing : let variable cant be shadowed with var
 //Q8 : what's the output:
 
 // let arr1 = ["Z", "A", "D", "B", "E"];
@@ -61,23 +65,34 @@ if (input1) {
     console.log("One");
 }
 //.............................................................
-
+// Q11:
 let input = 0;
 let result = input ? "Zero" : "One";
-console.log(result);
+console.log(result); // "One"
 
-function func(a, b, num) {
-    if (num == 1) return swapped
-    else if (num == -1) return a, b;
-    return null;
+// Q12:
+for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 1000)
 }
-// 0 dont have consistent behavior
 
+// Q13
+var x = 21;
+var func = function () {
+    console.log(x);
+    var x = 20;
+}
+func(); // guess the output here?.  Ans: undefined
+// inside the function x will be hoisted and set to undefined. and when calling, it will check first inside the fn . since undefined is present it will return it.
+// when we have variable in current scope then we will not check in global scope
 
-
-
-
-
-
-// reverse a array/string without using builtin fn
-// 
+// Q14 : guess the output??
+let count = 0;
+(function printCount() {
+    if (count == 0) {
+        let count = 1;
+        console.log(count); // 1
+    }
+    console.log(count); //0
+})();

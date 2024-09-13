@@ -47,3 +47,13 @@ function customSort(arr, attribute) {
 }
 let res = customSort(items, "name");
 console.log(res);
+
+
+//....................................................
+// sort fn logic
+function func(a, b, num) {
+    if (num == 1) return swapped
+    else if (num == -1) return a, b;
+    return null;
+}
+// 0 dont have consistent behavior

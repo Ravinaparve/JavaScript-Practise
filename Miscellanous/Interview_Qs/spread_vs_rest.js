@@ -21,7 +21,19 @@ const { a, ...rest } = { a: 1, b: 2, c: 3 };
 console.log(a);    // Output: 1
 console.log(rest); // Output: { b: 2, c: 3 }
 
+// trick Questions:
+const fn = (a, ...numbers, x, y,) => { // error: rest parameters should be at the end
+    console.log(x, y);
+}
+fn(5, 6, 7, 8);
 
+// correct ans:
+const fn1 = (a, x, y, ...numbers) => {
+    console.log(x, y); //6,7
+    console.log(numbers); //[ 8, 5, 8, 7, 5 ]
+
+}
+fn1(5, 6, 7, 8, 5, 8, 7, 5);
 
 
 //Key Differences
