@@ -57,7 +57,9 @@ function createCounter() {
 let counter = createCounter();
 console.log(counter);//[Function (anonymous)]
 console.log(counter()); //1
-console.log(counter()); //2  => The count variable is part of the closure’s environment, and it persists between calls to the inner function. This allows count to increment on each call rather than being reinitialized.Each call to counter() modifies and accesses the same count variable.
+console.log(counter()); //2  => The count variable is part of the closure’s environment, and it persists between calls to the inner function.
+// This allows count to increment on each call rather than being reinitialized.
+// Each call to counter() modifies and accesses the same count variable.
 //.............................................................................................................
 
 
@@ -70,8 +72,7 @@ function makeFunc() {
     }
     return displayName;
 }
-// makeFunc();
-console.log(makeFunc()); // return enitre displayName fn defintion
+console.log(makeFunc()); // return entire displayName fn defintion
 console.log(makeFunc()(5)); // calling displayName fn with nums =5
 //.............................................................................................................
 
@@ -95,17 +96,18 @@ console.log(sum(1)(2)(3)(4)); // 20
 
 //.............................................................................................................
 //Question: Write the function that will allow you to do this:
+var addSix = createBase(6);
+addSix(10); // return 16
+addSix(21); // returns 27;
 
-
+//Soln:
 let createBase = function (baseNum) {
     function inner(innerNum) {
         console.log(baseNum + innerNum);
     }
     return inner;
 }
-var addSix = createBase(6);
-addSix(10); // return 16
-addSix(21); // returns 27;
+
 
 
 //.............................................................................................................
@@ -119,7 +121,7 @@ function find(index) {
     console.log(a[index]);
 
 }
-find(6);
+find(6); //36
 find(12);
 
 //Soln: using closure.
