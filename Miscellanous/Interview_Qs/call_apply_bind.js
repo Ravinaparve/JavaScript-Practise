@@ -45,9 +45,8 @@ const wizard = {
   },
 };
 console.log(wizard.heal()); // NaN
-//...........................................................................................
 
-// object 2 is in need of heal method
+// object 2 needs the heal method
 const archer = {
   name: 'Robin Hood',
   health: 30,
@@ -57,15 +56,12 @@ console.log(wizard.heal.apply(archer, [20, 30]));  //80
 
 //..................................................................................................
 
-let details = {
-  firstname: "Ravina",
-}
-
+let details = { firstname: "Ravina" };
 let printFullName = function (hometown, state) {
   console.log(`${this.firstname}, ${hometown} ,${state}`);
 }
+==> console.log(printFullName.call(null, "nerul", "maharashtra")); // "undefined, nerul, maharashtra"
+// When null or undefined is passed as the this context, JavaScript uses the global object (window in browsers) or undefined in strict mode. 
+// Since null does not have a firstname property, this.firstname will be undefined.
 
-console.log(printFullName.call(null, "nerul", "maharashtra"));
-
-
-console.log(printFullName.apply(details, ["nerul", "maharashtra"]));
+==> console.log(printFullName.apply(details, ["nerul", "maharashtra"]));
