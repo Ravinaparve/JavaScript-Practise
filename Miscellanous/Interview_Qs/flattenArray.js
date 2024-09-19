@@ -35,7 +35,6 @@ console.log(flattenArray(arr, 2));
 let res = [];
 
 function flattenArr(arr, n) {
-    // if (n == 0) return;
     for (let elem of arr) {
         if (Array.isArray(elem) && n > 0) {
             flattenArr(elem, n - 1);
@@ -45,7 +44,7 @@ function flattenArr(arr, n) {
     }
 }
 let arr = [[1, 2], [3, [4, 5, [9, 10]]], [6, 7]];
-flattenArr(arr, 1);
+flattenArr(arr, 3);
 console.log(res);
 
 

@@ -54,8 +54,41 @@ console.log(mul(24)(33)); //792
 
 
 function add(a) {
+    // Return a function that takes the next number
     return function (b) {
-        if (b) return add(a + b); // if this fn has some value passed in it then call it again
-        else return a;
-    }
+        if (b === undefined) {
+            // If no argument is passed, return the accumulated sum
+            return a;
+        } else {
+            // If an argument is passed, add it to the accumulated sum and return the new function
+            return add(a + b);
+        }
+    };
 }
+
+
+//Q : Implement a function to handle curried sums such as:
+// curriedSum(1,2)(3,4);
+// curriedSum(1)(3,4)(2);
+// curriedSum(1,2,3)(4);
+
+
+function curriedSum(...initialArgs) {
+    // Inner function to handle further arguments or calculate the sum
+    const sum = (...args) => {
+        if (args.length === 0) {
+            // No arguments means return the accumulated sum
+            return initialArgs.reduce((acc, curr) => acc + curr, 0);
+        }
+        // Otherwise, accumulate the new arguments and return the sum function. accumulate all the args in side initialArgs and sum athem at the end
+        initialArgs.push(...args);
+        return sum;
+    };
+
+    return sum;
+}
+
+// Examples of usage:
+console.log(curriedSum(1, 2)(3, 4)());    // Output: 10
+console.log(curriedSum(1)(3, 4)(2)());    // Output: 10
+console.log(curriedSum(1, 2, 3)(4)());    // Output: 10
