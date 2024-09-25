@@ -6,7 +6,7 @@ Promises:
 - Understanding Promise.any and writing its polyfill.
 
 Function Concepts:
-- Currying with examples.
+- Currying with examples. 
 - Implement String.prototype.repeat.
 - Implement the compose() and pipe() polyfills.
 - Difference between Function Declaration and Function Expression.
