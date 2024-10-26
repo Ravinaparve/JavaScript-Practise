@@ -4,24 +4,28 @@ for (let i = 0; i < 5; i++) {
         console.log(i);
     }, i * 1000)
 }
+//o/p : 0 1 2 3 4
+
 // v/s
 for (var i = 0; i < 5; i++) {
     setTimeout(function () {
         console.log(i);
     }, i * 1000)
 }
+// o/p : 5 5 5 5 5
 //.....................................................................................................
 
 
 //Q2:  What is the Difference btw 2 codes:
 function a() {
     for (var i = 0; i < 3; i++) {
-        setTimeout(function log() {
+        setTimeout(function () {
             console.log(i);
         }, i * 1000);
     }
 }
 a();
+// 3 3 3
 //vs
 
 function a() {
@@ -32,7 +36,7 @@ function a() {
     }
 }
 a();
-
+// 0 1 2
 //...............................................................................................
 
 
@@ -42,7 +46,9 @@ for (var i = 1; i <= 2; i++) {
         alert(i);
     }, 100);
 }
-// get outut 1 , 2 without let
+// output : 3 3
+
+// Qs:  get output 1 , 2 without let from the above snippet
 
 //solution
 for (var i = 1; i <= 2; i++) {

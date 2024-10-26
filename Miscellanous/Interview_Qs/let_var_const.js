@@ -18,7 +18,7 @@ console.log(greet); // Hi
 
 //............................................................................
 
-// const greet = "Hi";
+const greet = "Hi";
 if (true) {
     const greet = "Welcome";
     console.log(greet); //Welcome
@@ -53,7 +53,8 @@ function test() {
     }
 }
 test();
-
+//Hi
+// Hello
 
 // //....................................................................................................................
 //Q1: whats the o/p:
@@ -74,7 +75,7 @@ testLog(); //?
 //Q3: whats the o/p:
 var a = 10;
 let a = 10;
-console.log(a, b); // SyntaxError: Identifier 'a' has already been declared
+console.log(a); // SyntaxError: Identifier 'a' has already been declared
 //reason:  in the same scope, you cannot redeclare a variable using "let" if it has already been declared with "var" (or let itself). This results in a SyntaxError because "let" does not allow redeclaration in the same scope.
 
 
@@ -82,3 +83,7 @@ console.log(a, b); // SyntaxError: Identifier 'a' has already been declared
 let a = 10;
 var a = 10;
 console.log(a, b); // Error: you cannot redeclare let with var or vice versa in the same scope), this line will throw a SyntaxError.
+
+
+// Unlike var, which allows redeclaration of the same variable in the same scope,
+//  let and const do not allow this. If you try to declare a variable with the same name using let or const within the same scope, JavaScript throws a SyntaxError.
