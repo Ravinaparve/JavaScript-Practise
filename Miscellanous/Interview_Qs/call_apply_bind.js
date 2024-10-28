@@ -65,6 +65,7 @@ let printFullName = function (hometown, state) {
 console.log(printFullName.apply(details, ["nerul", "maharashtra"]));
 
 console.log(printFullName.call(null, "nerul", "maharashtra")); // "undefined, nerul, maharashtra"
+
 // When null or undefined is passed as the this context, JavaScript uses the global object (window in browsers) or undefined in strict mode. 
 // Since null does not have a firstname property, this.firstname will be undefined.
 // for call context( ie this ) is not provided

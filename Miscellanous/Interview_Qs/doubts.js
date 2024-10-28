@@ -42,7 +42,7 @@ for (var i = 1; i <= 2; i++) {
         alert(i);
     }, 100);
 }
-// get outut 1 , 2 without let
+// get output 1 , 2 without let
 
 //solution
 for (var i = 1; i <= 2; i++) {

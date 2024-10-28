@@ -120,7 +120,7 @@ var func = function () {
 }
 func();
 
-Ans: undefined
+// Ans: undefined
 // inside the function x will be hoisted and set to undefined. and when calling, it will check first inside the fn . 
 //since undefined is present it will return it.
 // when we have variable in current scope then we will not check in global scope
