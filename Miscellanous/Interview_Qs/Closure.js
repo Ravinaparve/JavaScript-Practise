@@ -11,6 +11,8 @@ function z1() {
     }
     return y(); //  calling the fn and not returning the enitre fn definition
 }
+let x1 = z1();
+console.log(x1); //10
 //.............................................................................................................
 
 //example 1:
@@ -73,7 +75,7 @@ function makeFunc() {
     return displayName;
 }
 console.log(makeFunc()); // return entire displayName fn defintion
-console.log(makeFunc()(5)); // calling displayName fn with nums =5
+console.log(makeFunc()(5)); // Mozilla 5 ==> calling displayName fn with nums =5
 //.............................................................................................................
 
 

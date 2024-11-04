@@ -146,3 +146,12 @@ const func = (function (a) {
 })(5);
 // Ans : 5 (delete wont work )
 //delete is only used when we need to delete the property of obj and not for deleting variable inside fns
+
+
+
+// Q16:
+class myClass {
+    //....
+}
+console.log(typeof myClass);
+//Ans: function

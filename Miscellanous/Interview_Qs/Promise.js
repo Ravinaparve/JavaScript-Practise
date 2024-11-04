@@ -1,3 +1,17 @@
+// Good Blog: https://www.iodigital.com/en/history/isaac/promises-and-async-await
+
+// Basic Promise Syntax:
+const myPromise = new Promise((resolve, reject) => {
+    doAsynchronousThings(() => {
+        if (allIsGood) {
+            resolve('my data')
+        } else {
+            reject(new Error('things failed'))
+        }
+    })
+})
+
+//..................................................................................................
 function delay(ms) {
     return new Promise((resolve) => {
         setTimeout(() => resolve(), ms);

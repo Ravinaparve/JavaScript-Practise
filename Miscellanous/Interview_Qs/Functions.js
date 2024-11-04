@@ -21,12 +21,6 @@ let res1 = f(2);
 console.log(res1(3)) //5
 
 
-//above code can also be written as:
-function f(a) {
-    return function (b) {
-        return a + b;
-    }
-
-}
+//above code can also be called as:
 let res2 = f(2)(3);
 console.log(res2)

@@ -7,7 +7,7 @@ function f(a) {
 
 }
 let res2 = f(2)(3);
-console.log(res2)
+console.log(res2) // 5
 
 //Q1: get the sum of all the parameters passes
 // sum(2)(6)(1)
