@@ -38,6 +38,7 @@ a.call(); // Hii :::
 
 //EXAMPLE 4: ........................................................................
 //"wizard" obj has heal mthd
+
 const wizard = {
   name: 'Merlin',
   health: 100,
@@ -62,11 +63,12 @@ let details = { firstname: "Ravina" };
 let printFullName = function (hometown, state) {
   console.log(`${this.firstname}, ${hometown} ,${state}`);
 }
-console.log(printFullName.apply(details, ["nerul", "maharashtra"]));
+console.log(printFullName.apply(details, ["nerul", "maharashtra"])); //Ravina, nerul ,maharashtra
 
 console.log(printFullName.call(null, "nerul", "maharashtra")); // "undefined, nerul, maharashtra"
 
 // When null or undefined is passed as the this context, JavaScript uses the global object (window in browsers) or undefined in strict mode. 
+
 // Since null does not have a firstname property, this.firstname will be undefined.
 // for call context( ie this ) is not provided
 
@@ -235,8 +237,8 @@ var person1 = {
 }
 
 var person2 = { age: 24 };
-person.getAge.call(person2); //24
-person.getAgeArrow.call(person2); // ?? (ans: undefined)
+person1.getAge.call(person2); //24
+person2.getAgeArrow.call(person2); // ?? (ans: undefined)
 // arrow fn dont have "this", so they take context from their parent normal function .
 //since person1 is defined in global scope so it will point to global variable age  = 10
 // it doesnt matter how arrow function is called with (either will call, apply or bind) . it will always behave same everywhere.

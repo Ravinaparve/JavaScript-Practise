@@ -1,3 +1,11 @@
+// what's the output?
+function sum(num1, num2) {
+    return num1 + num2;
+}
+console.log(sum());
+// NaN
+
+
 // Q1. Flatten an array.  (flattenArray.js)
 // .....................................................................................................................................
 

@@ -23,6 +23,13 @@ let res = sum(2)(6)(1);
 console.log(res);
 
 
+
+
+
+//console.log(calc.add(10).mul(5).sub(10).div(4))
+
+
+
 // Q2: Evaluate("sum")(4)(2) ⇒ 4+2 =
 // Evaluate("multiply")(4)(2) ⇒ 4*2 = 6
 // Evaluate("Divide")(4)(2) ⇒ 4/2 = 6
@@ -92,3 +99,23 @@ function curriedSum(...initialArgs) {
 console.log(curriedSum(1, 2)(3, 4)());    // Output: 10
 console.log(curriedSum(1)(3, 4)(2)());    // Output: 10
 console.log(curriedSum(1, 2, 3)(4)());    // Output: 10
+
+
+//example:
+function multiplyByN(x) {
+    return function (y) {
+        return x * y;
+    }
+}
+
+console.log(multiplyByN(4)(2)); // 8 
+
+// can also be used as follows::
+const multiplyByfour = multiplyByN(4);
+console.log(multiplyByfour(2)); // 8
+
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log(multiply(2, 3));

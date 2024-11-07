@@ -66,6 +66,7 @@ const person5 = {
         console.log(this.name);
     }
 }
+person5.getDetails(); // returning empty
 
 //Example 8:
 let userDetails = {
@@ -196,7 +197,7 @@ obj.c(); // Outputs: 10
 function Hi() {
     console.log(this);
 }
-new Hi(); // Hi {} when function is called with new keyword. it create an empty object and this points ti that object
+new Hi(); // Hi {} when function is called with new keyword. it create an empty object and this points to that object
 
 // Tricky Questions:
 var length = 4;
@@ -218,4 +219,4 @@ const object2 = {
         arguments[0](); // what's logged ??  Ans: 3
     }
 }
-object.method(callback, 2, 3)
+object.method(callback, 2, 3);
