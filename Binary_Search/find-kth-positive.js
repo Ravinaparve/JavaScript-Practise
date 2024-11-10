@@ -1,3 +1,22 @@
+// Brute Force:
+var findKthPositive = function (arr, k) {
+    let i = 0;
+    let num = 1;
+
+    // matched with num => i++;
+    // not matched with num => k--;
+    while (k > 0) {
+        if (num !== arr[i]) {
+            k--;
+            if (k == 0) return num;
+        } else {
+            i++;
+        }
+        num++;
+    }
+};
+
+
 var findKthPositive = function (arr, k) {
     let left = 0;
     let right = arr.length - 1;
