@@ -1,0 +1,65 @@
+Cognizant Interview Questions :-
+ 
+html4 vs html5
+different validations in input types html
+pseudo elements
+box model
+how browser will know whether the website is responsive or not --> <meta name="viewport"> for responsive design.
+different state management
+context api vs redux
+useselect and usedispatch
+controlled vs uncontrolled components
+syntax to create store
+lazy loading
+usememo vs usecallback
+optional chaining
+all vs allsettled
+ 
+html5 web api 
+css preprocessor
+css variables
+forward ref
+middleware
+custom hooks
+project level error handling
+webpack
+null coalese
+performance optimization techniques
+ 
+ 
+Program question :-
+1. <p>Hello</p> append CTS in front of Hello using CSS
+2. Color odd numbers except 1st one
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+</ul>
+3. Rearrange the order as 3 1 2 using css
+<h1>1</h1> <h1>2</h1> <h1>3</h1>
+4. Remove the duplicates from the given array :- [21,22,12,22,34,12,23]
+5. Sort the given array of object using specific parameters (name, value)
+const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+6. reverse words from string and capitalize last character of every word.
+7. Get all the occurrences of given array :- [1,2,3,2,3,3,4,4]
+8. Extract country from the given nested array
+const user = {   
+name: "Krish",  
+age: 33,   
+username: "interview",  
+address: {     
+  country: "India",    
+  postalCode: "7700",   
+},
+};
+
+console.log(calc.add(10).mul(5).sub(10).div(4))

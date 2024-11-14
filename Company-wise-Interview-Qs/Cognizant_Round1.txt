@@ -1,0 +1,97 @@
+Anil Kumar Ganta
+
+4:12 PM
+<p>Hello</p> 
+
+Anil Kumar Ganta
+
+4:12 PM
+CTS
+
+Anil Kumar Ganta
+
+4:14 PM
+<ul>
+
+<li>1</li>
+
+<li>2</li>
+
+<li>3</li>
+
+<li>4</li>
+
+<li>5</li>
+
+</ul>
+
+Anil Kumar Ganta
+
+4:19 PM
+<h1>1</h1> <h1>2</h1> <h1>3</h1>
+
+Anil Kumar Ganta
+
+4:20 PM
+let numArray = [21,22,12,22,34,12,23]
+
+Anil Kumar Ganta
+
+4:26 PM
+const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+Anil Kumar Ganta
+
+4:33 PM
+const numArr = [1, [2, [3], 4, [5, 6, [7]]]];
+Anil Kumar Ganta
+
+4:36 PM
+reverse words from string and capitalize last character of every word.  
+
+You
+
+4:44 PM
+hello
+
+You
+
+4:47 PM
+cognizant test.doc
+doc
+You
+
+4:57 PM
+createStore({
+login
+})
+
+You
+
+4:58 PM
+lazy(() => "import component")
+<Suspense></Suspense>
+
+
+
+
+
+html4 vs html5
+pseudo elements
+box model
+how browser will know whether the website is responsive or not
+different state management
+context api vs redux
+useselect and usedispatch
+controlled vs uncontrolled components
+syntax to create store
+lazy loading
+usememo vs usecallback
+optional chaining
+all vs allsettled
