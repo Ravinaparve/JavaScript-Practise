@@ -28,4 +28,24 @@ console.log("ans", ans); // will retun a promise
 // await keyword can only be used with promise because The await operator is used to wait for a Promise and get its fulfillment value.
 
 
+// https://www.youtube.com/watch?v=m4QNV0dV0n8 - Publisic sapient question
+let productsData = [];
+async function getCartData() {
+    let response = await fetch("https://fakestoreapi.com/carts");
+    let details = await response.json();
+    // console.log(details);
+    productsData = details.map(user => {
+        let { products } = user;
+        let { productId } = products;
+        console.log(productId);
+
+        console.log("products", products);
+
+        return products.map(prod => prod.productId);
+    });
+
+    console.log("productsData", productsData);
+
+}
+getCartData();
 

@@ -1,13 +1,14 @@
 // given 2 arrays that are sorted. merge and sort them
 // using built-in:......................................................................................
 
-function mergeSortedArrs(arr1, arr2) {
+function mergeSortedArrs(arr1, arr2) { // (m+n)log(m+n)
     let merged = [...arr1, ...arr2];
     merged.sort((a, b) => a - b);
     return merged;
 }
 
 //.........................................................................................................
+// using merge sort - better from above
 function mergeSortedArrs(ar1, ar2) {
     let left = 0;
     let right = 0;
