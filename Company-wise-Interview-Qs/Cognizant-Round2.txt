@@ -29,6 +29,11 @@ performance optimization techniques
  
 Program question :-
 1. <p>Hello</p> append CTS in front of Hello using CSS
+
+  p::before{
+    content:"CTS"
+  }
+  
 2. Color odd numbers except 1st one
 <ul>
 <li>1</li>

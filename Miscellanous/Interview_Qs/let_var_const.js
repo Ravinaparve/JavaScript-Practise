@@ -87,3 +87,12 @@ console.log(a, b); // Error: you cannot redeclare let with var or vice versa in 
 
 // Unlike var, which allows redeclaration of the same variable in the same scope,
 //  let and const do not allow this. If you try to declare a variable with the same name using let or const within the same scope, JavaScript throws a SyntaxError.
+
+
+
+
+// Q:
+let i, j, k = 0;
+console.log(i)
+console.log(j)
+console.log(k)
