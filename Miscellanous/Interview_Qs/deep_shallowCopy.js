@@ -54,8 +54,10 @@ const obj4 = {
 let obj5 = { ...obj4 };
 obj5.age = 24;
 obj5.address.state = "KR"
-console.log("orig=>", obj4);
-console.log("copy", obj5);
+console.log("orig=>", obj4); //{ cat: 'Abhi', age: '12', address: { street: 'nerul', state: 'KR' } }
+console.log("copy", obj5); //{ cat: 'Abhi', age: 24, address: { street: 'nerul', state: 'KR' } }
+
+
 
 
 
