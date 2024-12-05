@@ -68,3 +68,26 @@ let arr1 = [[1, 2], [3, [4, 5, [9, 10]]], [6, 7]];
 customFlat(arr1);
 console.log(output);
 
+
+
+//.....................return from within the fn
+function flatten(value) {
+    let flattenedArr = [];
+
+    for (let i = 0; i < value.length; i++) {
+        if (Array.isArray(value[i])) {
+            flattenedArr.push(...flatten(value[i]));
+            // flatten(value[i]);
+        } else {
+            flattenedArr.push(value[i]);
+        }
+    }
+
+    return flattenedArr;
+}
+
+let arr2 = [
+    [1, 2],
+    [3, 4],
+]
+console.log(flatten(arr2)) // [ 1, 2, 3, 4 ]
