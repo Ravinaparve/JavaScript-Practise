@@ -1,5 +1,11 @@
 // Good Blog: https://www.iodigital.com/en/history/isaac/promises-and-async-await
 
+
+// order of execution:
+//Promises execute before setTimeout
+
+
+
 // Basic Promise Syntax:
 const myPromise = new Promise((resolve, reject) => {
     doAsynchronousThings(() => {
