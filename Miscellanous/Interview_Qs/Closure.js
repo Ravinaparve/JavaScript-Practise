@@ -110,7 +110,14 @@ let createBase = function (baseNum) {
     return inner;
 }
 
+// or
 
+
+function createBase(num) {
+    return function (a) {
+        return num + a;
+    }
+}
 
 //.............................................................................................................
 //how can we use closure's to optimize the time of our code?
