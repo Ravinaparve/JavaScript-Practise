@@ -43,27 +43,28 @@ class LinkedList {
 
     // TC : O(n)
     insertAtPosition(pos, val) {
-        let node = new Node(val);
+        let newNode = new Node(val);
 
         if (pos == 1) {
             if (this.head == null) {
-                this.head = node;
-            } else {
-                node.next = this.head;
-                this.head = node;
+                this.head = newNode;
+            } else { // insert at head
+                newNode.next = this.head;
+                this.head = newNode;
             }
+        }
+        if (this.head.next == null) {
+            insertAtTail(val)
         }
         else {
             let temp = this.head;
             let count = 0;
-            let prev;
             while (temp) {
                 count++;
-                if (count == pos) {
-                    prev.next = node;
-                    node.next = temp;
+                if (count == pos - 1) {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
                 }
-                prev = temp;
                 temp = temp.next;
             }
         }
