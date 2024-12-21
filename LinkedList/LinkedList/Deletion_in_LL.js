@@ -8,6 +8,7 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null;
+        this.tail = null;
         this.size = 0;
     }
     insertAtHead(val) {
@@ -45,10 +46,11 @@ class LinkedList {
         if (this.head == null) return;
         else {
             let temp = this.head;
-            this.head = temp.next;
-            temp = null;
+            this.head = temp.next; // move position of head first
+            temp = null; // now remove the original head
         }
     }
+
     removeTail() {
         if (this.head == null || this.head.next == null) return; // retuturn nothing if there's no element or just a single element. because for single. head== tail . if we remove head, there will be no LL . 
 
@@ -58,6 +60,8 @@ class LinkedList {
             temp = temp.next
         }
         temp.next = null; // and set the second last element to null. this will remove reference to last element
+        this.tail = temp; // tail points to new tail
+        console.log("new tail==>", this.tail);
     }
 
     // removes kth element from the list
@@ -77,14 +81,13 @@ class LinkedList {
         else {
             let count = 0;
             let temp = this.head;
-            let prev;
             while (temp) {
                 count++;
-                if (count == pos) {
-                    prev.next = temp.next;
-                    break;
+                if (count === pos - 1) {
+                    let removeNode = temp.next; //  both temp.next and removeNode points to same obj
+                    temp.next = temp.next.next;
+                    removeNode = null; // the node still points to the obj at temp.next. so free memory by setting null
                 }
-                prev = temp;
                 temp = temp.next;
             }
         }
