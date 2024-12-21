@@ -72,14 +72,17 @@ class DLinkedList {
         else {
             let temp = this.head;
             let count = 0;
-
+            let prev = null;
+            let curr = null;
             while (temp) {
                 count++;
                 if (count == pos - 1) {
-                    let removeNode = temp.next;
-                    temp.next = temp.next.next;
-                    temp.next.next.back = temp;
-                    removeNode = null;
+                    prev = temp;
+                    curr = temp.next;
+
+                    prev.next = curr.next;
+                    curr.next.back = prev;
+                    curr = null;
                 }
                 temp = temp.next;
             }
