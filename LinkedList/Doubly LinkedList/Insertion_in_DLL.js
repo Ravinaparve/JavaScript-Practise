@@ -76,6 +76,19 @@ class LinkedList {
         }
     }
 
+    // insert at tail
+    insertAfterTail(val) {
+        let newNode = new Node(val);
+        let temp = this.head;
+
+        while (temp.next) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        newNode.back = temp;
+        this.tail = newNode;
+
+    }
     //insert before the kth position
     insertBefore(pos, val) {
         if (pos == 1) {
@@ -85,15 +98,18 @@ class LinkedList {
                 this.insertBeforeHead(val);
             }
         } else {
-            let node = new Node(val);
             let count = 0;
             let temp = this.head;
             while (temp) {
                 count++;
                 if (count == pos - 1) {
-                    node.next = temp.next;
-                    node.back = temp;
-                    temp.next = node;
+                    let newNode = new Node(val);
+
+                    newNode.next = temp.next;
+                    temp.next.back = newNode;
+
+                    temp.next = newNode;
+                    newNode.back = temp;
                     // console.log(node);
                 }
                 temp = temp.next;
