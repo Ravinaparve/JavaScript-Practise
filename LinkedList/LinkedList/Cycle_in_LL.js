@@ -8,10 +8,10 @@ class Node {
 function convertArrtoDLL(arr) {
     let head = new Node(arr[0]);
     let prev = head;
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         let newNode = new Node(arr[i]);
         prev.next = newNode;
-        newNode = prev;
+        prev = newNode;
     }
     return head;
 }
